@@ -1,0 +1,15 @@
+# Kraim Abdellah
+## Here we'll create Elastic Beanstalk using Terraform
+
+# Create an Elastic Beanstalk application
+eb create power-co2-api
+
+# Configure the application to use Python 3.8 and the Flask web framework
+eb use platform Python 3.8
+eb setenv VIRTUALENV_PYTHON=/opt/python/3.8
+
+# Upload the API code to the application
+eb deploy .
+
+# Launch the application
+eb start
